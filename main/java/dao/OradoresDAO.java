@@ -12,8 +12,8 @@ import util.ConexionDB;
 public class OradoresDAO {
     public void agregarOrador(Orador orador) {
         String sql = "INSERT INTO oradores (nombre, apellido, tema, fecha_alta) VALUES (?, ?, ?, ?)";
-        //bloque try-with-resources
-        //asegura que los recursos abiertos en su declaración (dentro de los paréntesis) se cierren automáticamente al final del bloque try 
+        
+         
         try (Connection conn = ConexionDB.conectar();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
